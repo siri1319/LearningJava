@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello World! this is me ");
+       /* System.out.println("Hello World! this is me ");
         int StudentAge = 3;
         double StudentGpa = 4.5;
         String StudentFirstName = "Tom";
@@ -19,6 +19,16 @@ public class Main {
         //StudentGpa = input.nextDouble();
         //System.out.println("Student GPA is now "+ StudentGpa);
         StudentFirstName = input.next();
-        System.out.println("Student Name is Updated: "+StudentFirstName +" "+StudentLastName);
+        System.out.println("Student Name is Updated: "+StudentFirstName +" "+StudentLastName);*/
+        System.out.println("Pick a number from 1 to 10");
+        Scanner input = new Scanner(System.in);
+        int selectedNum = input.nextInt();
+        if (selectedNum < 5)
+        {
+            System.out.println("Enjoy the Good Luck a Friend brings you");
+        }
+        else {
+            System.out.println("Your Shoe selection will make you happy today");
+        }
     }
 }
