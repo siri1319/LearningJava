@@ -1,3 +1,4 @@
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
@@ -12,8 +13,8 @@ public class Main {
         while (Option)
         {
             Scanner input = new Scanner(System.in);
-            String UserInput = input.next();
-            if (UserInput.equals("Delhi"))
+            String UserInput = input.next().toLowerCase();
+            if (UserInput.equals("delhi"))
             {
                 System.out.println("You have entered the Correct Option");
                 Option=false;
