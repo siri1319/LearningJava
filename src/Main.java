@@ -1,28 +1,33 @@
 import java.util.Locale;
 import java.util.Scanner;
 public class Main {
-    public static double percentageMarks(int maths1,int science1, int computers1){
+    public static double employeeSalary(double hoursPerWeek, double payPerHour){
 
-        double TotalMarksScored = maths1+science1+computers1;
-        double TotalMarks = 75;
-        double percentage = Math.round((TotalMarksScored/TotalMarks)*100);
-        return percentage;
+        double yearlySalary = 52 * hoursPerWeek * payPerHour;
+        return yearlySalary;
+    }
+    public static double vaccation(double unpaiddays, double payPerHour){
+
+        double unpaidSalary = 8 * unpaiddays * payPerHour;
+        return unpaidSalary;
     }
     public static void main(String[] args) {
-        System.out.println("Welcome to the Student Portal! ");
-        System.out.println("Enter student marks:");
-        System.out.println("Enter marks scored in maths out of 25");
+        System.out.println("Welcome to the Employee Portal!  ");
+        System.out.println("Enter employee's work hours per week :");
         Scanner input = new Scanner(System.in);
-        int maths = input.nextInt();
-        System.out.println("Enter marks scored in Science out of 25");
-        int science = input.nextInt();
-        System.out.println("Enter marks scored in Computers out of 25");
-        int computers = input.nextInt();
-        double StudentPercentage = percentageMarks(maths,science,computers);
+        double hours = input.nextDouble();
+        System.out.println("Enter employee's pay per hour");
+        double pay = input.nextDouble();
+        double yearSalary = employeeSalary(hours,pay);
 
-        System.out.println("Percentage secured by Student is " +StudentPercentage);
+        System.out.println("Enter employee's No. of vaccation days :");
+        double numberofdays = input.nextDouble();
 
+        double unpaid = vaccation(numberofdays,pay);
 
+        double TotalEmpSal = yearSalary - unpaid;
+
+        System.out.println("Employee Salary is ::" +TotalEmpSal);
 
     }
 
