@@ -1,12 +1,12 @@
 import java.util.Locale;
 import java.util.Scanner;
 public class Main {
-    public static void percentageMarks(int maths1,int science1, int computers1){
+    public static double percentageMarks(int maths1,int science1, int computers1){
 
         double TotalMarksScored = maths1+science1+computers1;
         double TotalMarks = 75;
-        double percentage = (TotalMarksScored/TotalMarks)*100;
-        System.out.println("Percentage Scored by student :: " +percentage);
+        double percentage = Math.round((TotalMarksScored/TotalMarks)*100);
+        return percentage;
     }
     public static void main(String[] args) {
         System.out.println("Welcome to the Student Portal! ");
@@ -18,9 +18,9 @@ public class Main {
         int science = input.nextInt();
         System.out.println("Enter marks scored in Computers out of 25");
         int computers = input.nextInt();
-        percentageMarks(maths,science,computers);
+        double StudentPercentage = percentageMarks(maths,science,computers);
 
-        System.out.println("All the best for your rest of the day. Thank you!");
+        System.out.println("Percentage secured by Student is " +StudentPercentage);
 
 
 
