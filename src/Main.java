@@ -1,31 +1,26 @@
 import java.util.Locale;
 import java.util.Scanner;
-
 public class Main {
-    public static void main(String[] args) {
-        System.out.println("Answer the below Question ");
-        System.out.println("What is the Capital of India?");
-        System.out.println("1.Delhi");
-        System.out.println("2.Mumbai");
-        System.out.println("3.Chennai");
-        System.out.println("4.Hyderabad");
-        boolean Option = true;
-        while (Option)
+    public static void goodMorning(){
+        System.out.println("Good Morning..!! please enter any number from 1 to 5 to try your luck!");
+        Scanner input = new Scanner(System.in);
+        int number = input.nextInt();
+        if (number == 3){
+            System.out.println("You are the Luckiest person today!!!");
+            }
+        else
         {
-            Scanner input = new Scanner(System.in);
-            String UserInput = input.next().toLowerCase();
-            if (UserInput.equals("delhi"))
-            {
-                System.out.println("You have entered the Correct Option");
-                Option=false;
-            }
-            else {
-                System.out.println("You have entered the Wrong option. Please try again");
-            }
-
-
+            System.out.println("You are not lucky!!! Try your luck tomorrow!!! ");
         }
-        System.out.println("Congrats!!! You made it!");
+    }
+    public static void main(String[] args) {
+        System.out.println("Welcome to the Job! ");
+        goodMorning();
+
+        System.out.println("All the best for your rest of the day. Thank you!");
+
+
+
     }
 
 
